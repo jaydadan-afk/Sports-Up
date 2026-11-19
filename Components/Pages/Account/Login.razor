@@ -1,0 +1,114 @@
+﻿@page "/"
+@page "/login"
+@layout LoginLayout
+
+<PageTitle>Login - Sports Up</PageTitle>
+
+<div class="login-container">
+
+    <!-- LEFT SIDE: LOGIN FORM -->
+    <div class="login-left">
+
+        <div class="top-text">
+            <span>Welcome to Sports Up</span>
+        </div>
+
+        <div class="login-content">
+
+            <div class="logo">
+                <h2>SPORTS <span>UP</span></h2>
+            </div>
+
+            <h1>Welcome Back!</h1>
+
+            <p class="subtitle">
+                Sign in to access your Sports Up account.
+            </p>
+
+            <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <InputText class="form-input"
+                               @bind-Value="loginModel.Email"
+                               placeholder="example@email.com" />
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <InputText class="form-input"
+                               type="password"
+                               @bind-Value="loginModel.Password"
+                               placeholder="Enter your password" />
+                </div>
+
+                <div class="forgot-password">
+                    <a href="/forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Sign In
+                </button>
+
+            </EditForm>
+
+            @if (!string.IsNullOrEmpty(message))
+            {
+                <p class="message">@message</p>
+            }
+
+        </div>
+
+        <div class="bottom-text">
+            © 2026 Sports Up. All Rights Reserved.
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE: DESIGN PANEL -->
+    <div class="login-right">
+
+        <div class="right-content">
+
+            <div class="sports-icon">
+                SU
+            </div>
+
+            <h1>
+                Play Together.<br />
+                Win Together.
+            </h1>
+
+            <p>
+                Bringing students together through
+                sports, teamwork, and competition.
+            </p>
+
+            <div class="right-footer">
+                SCHOOL INTRAMURALS MANAGEMENT SYSTEM
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@code {
+
+    private LoginModel loginModel = new();
+
+    private string? message;
+
+    private void HandleLogin()
+    {
+        message = "Login is not connected to the database yet.";
+    }
+
+    public class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+
+        public string Password { get; set; } = string.Empty;
+    }
+}
