@@ -109,3 +109,12 @@
     font-size: 10px;
     color: #999;
 }
+/* Global page settings */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}

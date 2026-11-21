@@ -31,7 +31,7 @@
             </div>
             <div class="stat-icon green">🏠</div>
         </div>
-
+            
         <div class="stat-card">
             <div>
                 <p>Available Sports</p>
@@ -92,89 +92,62 @@
         </div>
 
         <div class="content-card recent-activity">
-
-            <h3>Recent Activity</h3>
-
-            <div class="timeline-item">
-                <span class="timeline-dot green-dot"></span>
-                <div>
-                    <h4>New Student Registered</h4>
-                    <p>A new student joined Sports Up.</p>
-                    <small>Recently</small>
+            <!-- House Standings -->
+            <section class="content-card standings-card">
+                <div class="card-header">
+                    <h3>House Leaderboards</h3>
+                    <a href="/admin/leaderboards">View All →</a>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <span class="timeline-dot blue-dot"></span>
-                <div>
-                    <h4>Match Scheduled</h4>
-                    <p>A new basketball match was scheduled.</p>
-                    <small>Recently</small>
-                </div>
-            </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>House</th>
+                                <th>Points</th>
+                                <th>Standing</th>
+                            </tr>
+                        </thead>
 
-            <div class="timeline-item">
-                <span class="timeline-dot orange-dot"></span>
-                <div>
-                    <h4>Results Submitted</h4>
-                    <p>A match result is waiting for approval.</p>
-                    <small>Recently</small>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Red House</td>
+                                <td>120</td>
+                                <td><span class="status first">1st Place</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Blue House</td>
+                                <td>105</td>
+                                <td><span class="status second">2nd Place</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Green House</td>
+                                <td>90</td>
+                                <td><span class="status third">3rd Place</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>Yellow House</td>
+                                <td>75</td>
+                                <td><span class="status fourth">4th Place</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
+            </section>
+           
 
         </div>
 
     </section>
 
-    <!-- House Standings -->
-    <section class="content-card standings-card">
-        <div class="card-header">
-            <h3>House Leaderboards</h3>
-            <a href="/admin/leaderboards">View All →</a>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>House</th>
-                        <th>Points</th>
-                        <th>Standing</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Red House</td>
-                        <td>120</td>
-                        <td><span class="status first">1st Place</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Blue House</td>
-                        <td>105</td>
-                        <td><span class="status second">2nd Place</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Green House</td>
-                        <td>90</td>
-                        <td><span class="status third">3rd Place</span></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Yellow House</td>
-                        <td>75</td>
-                        <td><span class="status fourth">4th Place</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+   
 
 </div>

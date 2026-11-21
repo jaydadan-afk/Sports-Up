@@ -1,44 +1,63 @@
 
+/* =====================================================
+   1. MAIN DASHBOARD CONTAINER
+   Controls the overall dashboard layout and background.
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
 .dashboard-container {
-    padding: 30px;
+    padding: 25px;
     background: #f4f5f9;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 0; /* Remove unnecessary full-screen height */
+    height: auto;
     font-family: Arial, sans-serif;
 }
 
-/* Welcome Banner */
+
+/* =====================================================
+   2. WELCOME BANNER
+   Controls the welcome message at the top.
+   ===================================================== */
 
 .welcome-banner {
     background: linear-gradient(110deg, #e83258, #3439ed, #72b9e8);
-    padding: 35px;
+    padding: 25px 30px;
     border-radius: 14px;
     color: white;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
     .welcome-banner h1 {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 700;
-        margin-bottom: 8px;
+        margin: 0 0 8px;
     }
 
     .welcome-banner p {
-        font-size: 15px;
+        font-size: 13px;
         margin: 0;
     }
 
-/* Statistics */
+
+/* =====================================================
+   3. STATISTICS GRID
+   Controls the four dashboard statistic cards.
+   ===================================================== */
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 15px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
 .stat-card {
     background: white;
-    padding: 22px;
+    padding: 18px;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     display: flex;
@@ -48,13 +67,13 @@
 
     .stat-card p {
         color: #64748b;
-        font-size: 13px;
+        font-size: 12px;
         margin: 0 0 8px;
     }
 
     .stat-card h2 {
         color: #1e293b;
-        font-size: 29px;
+        font-size: 25px;
         margin: 0 0 6px;
     }
 
@@ -63,13 +82,20 @@
         font-size: 11px;
     }
 
+
+/* =====================================================
+   4. STATISTIC ICONS
+   Controls the circular backgrounds behind the icons.
+   ===================================================== */
+
 .stat-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .blue {
@@ -88,25 +114,32 @@
     background: #ffedd5;
 }
 
-/* Main Content */
+
+/* =====================================================
+   5. MAIN DASHBOARD CONTENT
+   Controls the Recent Activities and Leaderboards.
+   ===================================================== */
 
 .dashboard-content {
     display: grid;
     grid-template-columns: 1.7fr 1fr;
-    gap: 20px;
-    margin-bottom: 22px;
+    gap: 16px;
+    /* Remove unnecessary space below the dashboard sections */
+    margin-bottom: 0;
+    align-items: stretch;
 }
 
 .content-card {
     background: white;
-    padding: 22px;
+    padding: 18px;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
+    min-width: 0;
 }
 
     .content-card h3 {
         color: #1e293b;
-        font-size: 17px;
+        font-size: 16px;
         margin: 0;
     }
 
@@ -114,96 +147,75 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
     .card-header a {
         color: #3345d8;
-        font-size: 12px;
+        font-size: 11px;
         text-decoration: none;
     }
 
-/* Sports Activities */
+
+/* =====================================================
+   6. SPORTS ACTIVITIES
+   Controls each sports activity item.
+   ===================================================== */
 
 .activity-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 13px;
     border: 1px solid #e5e7eb;
     border-radius: 9px;
-    padding: 16px;
-    margin-bottom: 12px;
+    padding: 13px;
+    margin-bottom: 10px;
 }
+
+    .activity-item:last-child {
+        margin-bottom: 0;
+    }
 
 .activity-icon {
     background: #fee2e2;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 9px;
+    flex-shrink: 0;
 }
 
-.activity-item h4,
-.timeline-item h4 {
+.activity-item h4 {
     color: #1e293b;
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 0 5px;
 }
 
-.activity-item p,
-.timeline-item p {
+.activity-item p {
     color: #64748b;
-    font-size: 12px;
+    font-size: 11px;
     margin: 0 0 5px;
 }
 
 .activity-item span {
     color: #16a34a;
-    font-size: 11px;
+    font-size: 10px;
 }
 
-/* Recent Activity */
 
-.timeline-item {
-    display: flex;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.timeline-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 4px;
-}
-
-.green-dot {
-    background: #22c55e;
-}
-
-.blue-dot {
-    background: #3b82f6;
-}
-
-.orange-dot {
-    background: #f97316;
-}
-
-.timeline-item small {
-    color: #94a3b8;
-    font-size: 11px;
-}
-
-/* House Standings */
+/* =====================================================
+   7. HOUSE LEADERBOARDS / STANDINGS TABLE
+   Controls the house ranking table.
+   ===================================================== */
 
 .standings-card {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .table-wrapper {
+    width: 100%;
     overflow-x: auto;
 }
 
@@ -213,25 +225,33 @@ table {
     text-align: left;
 }
 
-th, td {
-    padding: 15px;
+th,
+td {
+    padding: 12px;
     border-bottom: 1px solid #e5e7eb;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 th {
     color: #64748b;
     background: #f8fafc;
+    font-weight: 600;
 }
 
 td {
     color: #334155;
 }
 
+
+/* =====================================================
+   8. HOUSE STANDING BADGES
+   Controls the colors of the ranking labels.
+   ===================================================== */
+
 .status {
-    padding: 5px 10px;
+    padding: 4px 9px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .first {
@@ -254,9 +274,14 @@ td {
     color: #64748b;
 }
 
-/* Responsive */
+
+/* =====================================================
+   9. RESPONSIVE DESIGN - TABLETS
+   Applies when screen width is 1000px or smaller.
+   ===================================================== */
 
 @media (max-width: 1000px) {
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -266,7 +291,14 @@ td {
     }
 }
 
+
+/* =====================================================
+   10. RESPONSIVE DESIGN - MOBILE PHONES
+   Applies when screen width is 600px or smaller.
+   ===================================================== */
+
 @media (max-width: 600px) {
+
     .dashboard-container {
         padding: 15px;
     }
@@ -275,7 +307,62 @@ td {
         grid-template-columns: 1fr;
     }
 
-    .welcome-banner h1 {
-        font-size: 23px;
+    .welcome-banner {
+        padding: 20px;
+    }
+
+        .welcome-banner h1 {
+            font-size: 22px;
+        }
+
+    .content-card {
+        padding: 15px;
+    }
+}
+
+/* =====================================================
+   FIX: FILL THE REMAINING BOTTOM SPACE
+   ===================================================== */
+
+/* Make the dashboard fill the browser screen */
+.dashboard-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the two dashboard sections use remaining height */
+.dashboard-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 0;
+    min-height: 0;
+}
+
+    /* Stretch both cards to the same height */
+    .dashboard-content > .content-card {
+        height: 100%;
+        min-height: 280px;
+    }
+
+/* Keep the content properly positioned */
+.content-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keep the leaderboard table inside its card */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Prevent unnecessary page scrolling on desktop */
+@media (min-width: 1001px) {
+    html, body {
+        overflow-y: hidden;
     }
 }
