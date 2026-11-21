@@ -1,30 +1,75 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">SportsUp</a>
+﻿
+<div class="sports-sidebar">
+
+    <div class="sidebar-brand">
+        <h3>Sports Up</h3>
+        <span>Intramurals Manager</span>
     </div>
+
+    <div class="sidebar-section">
+        <p class="section-title">MENU</p>
+
+        <NavLink href="/admin/dashboard" class="sidebar-link">
+            <span class="nav-icon">▦</span>
+            Dashboard
+        </NavLink>
+
+        <NavLink href="/admin/students" class="sidebar-link">
+            <span class="nav-icon">▤</span>
+            Students
+        </NavLink>
+
+        <NavLink href="/admin/houses" class="sidebar-link">
+            <span class="nav-icon">⌂</span>
+            Houses
+        </NavLink>
+
+        <NavLink href="/admin/sports" class="sidebar-link">
+            <span class="nav-icon">○</span>
+            Sports
+        </NavLink>
+
+        <NavLink href="/admin/teams" class="sidebar-link">
+            <span class="nav-icon">♧</span>
+            Teams
+        </NavLink>
+
+        <NavLink href="/admin/registrations" class="sidebar-link">
+            <span class="nav-icon">☷</span>
+            Registrations
+        </NavLink>
+
+        <NavLink href="/admin/matches" class="sidebar-link">
+            <span class="nav-icon">▦</span>
+            Match Schedules
+        </NavLink>
+
+        <NavLink href="/admin/leaderboards" class="sidebar-link">
+            <span class="nav-icon">≡</span>
+            Leaderboards
+        </NavLink>
+    </div>
+
+    <div class="sidebar-section">
+        <p class="section-title">OTHERS</p>
+
+        <NavLink href="/admin/announcements" class="sidebar-link">
+            <span class="nav-icon">▱</span>
+            Announcements
+        </NavLink>
+
+        <NavLink href="/admin/reports" class="sidebar-link">
+            <span class="nav-icon">▤</span>
+            Reports
+        </NavLink>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="profile-avatar">A</div>
+        <div>
+            <strong>Administrator</strong>
+            <small>Sports Up Admin</small>
+        </div>
+    </div>
+
 </div>
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
-

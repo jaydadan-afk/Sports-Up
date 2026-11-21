@@ -7,5 +7,6 @@ namespace SportsUp.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
+        //Controller
     }
 }

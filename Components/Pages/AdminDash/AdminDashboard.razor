@@ -1,0 +1,180 @@
+﻿@page "/admin/dashboard"
+@layout MainLayout
+
+<PageTitle>Admin Dashboard | Sports Up</PageTitle>
+
+<div class="dashboard-container">
+
+    <!-- Welcome Banner -->
+    <section class="welcome-banner">
+        <h1>Welcome Back! 👋</h1>
+        <p>Manage your school's intramurals and sports activities.</p>
+    </section>
+
+    <!-- Statistics Cards -->
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <div>
+                <p>Total Students</p>
+                <h2>130</h2>
+                <span>Registered students</span>
+            </div>
+            <div class="stat-icon blue">♟</div>
+        </div>
+
+        <div class="stat-card">
+            <div>
+                <p>Total Houses</p>
+                <h2>4</h2>
+                <span>Participating houses</span>
+            </div>
+            <div class="stat-icon green">🏠</div>
+        </div>
+
+        <div class="stat-card">
+            <div>
+                <p>Available Sports</p>
+                <h2>12</h2>
+                <span>Sports categories</span>
+            </div>
+            <div class="stat-icon purple">🏆</div>
+        </div>
+
+        <div class="stat-card">
+            <div>
+                <p>Upcoming Matches</p>
+                <h2>24</h2>
+                <span>Scheduled matches</span>
+            </div>
+            <div class="stat-icon orange">📅</div>
+        </div>
+
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <section class="dashboard-content">
+
+        <div class="content-card recent-events">
+
+            <div class="card-header">
+                <h3>Recent Sports Activities</h3>
+                <a href="/admin/matches">View All →</a>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon">🏀</div>
+                <div>
+                    <h4>Basketball Tournament</h4>
+                    <p>Red House vs Blue House</p>
+                    <span>Upcoming Match</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon">🏐</div>
+                <div>
+                    <h4>Volleyball Competition</h4>
+                    <p>Green House vs Yellow House</p>
+                    <span>Registration Open</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-icon">♟</div>
+                <div>
+                    <h4>Chess Competition</h4>
+                    <p>Student registrations</p>
+                    <span>Ongoing Registration</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-card recent-activity">
+
+            <h3>Recent Activity</h3>
+
+            <div class="timeline-item">
+                <span class="timeline-dot green-dot"></span>
+                <div>
+                    <h4>New Student Registered</h4>
+                    <p>A new student joined Sports Up.</p>
+                    <small>Recently</small>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-dot blue-dot"></span>
+                <div>
+                    <h4>Match Scheduled</h4>
+                    <p>A new basketball match was scheduled.</p>
+                    <small>Recently</small>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-dot orange-dot"></span>
+                <div>
+                    <h4>Results Submitted</h4>
+                    <p>A match result is waiting for approval.</p>
+                    <small>Recently</small>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- House Standings -->
+    <section class="content-card standings-card">
+        <div class="card-header">
+            <h3>House Leaderboards</h3>
+            <a href="/admin/leaderboards">View All →</a>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>House</th>
+                        <th>Points</th>
+                        <th>Standing</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Red House</td>
+                        <td>120</td>
+                        <td><span class="status first">1st Place</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Blue House</td>
+                        <td>105</td>
+                        <td><span class="status second">2nd Place</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Green House</td>
+                        <td>90</td>
+                        <td><span class="status third">3rd Place</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Yellow House</td>
+                        <td>75</td>
+                        <td><span class="status fourth">4th Place</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
